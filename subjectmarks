@@ -1,0 +1,19 @@
+def calculate_percentage(subjectmarks):
+    total_marks = sum(subjectmarks)
+    total_subjects = len(subjectmarks)
+    percentage = (total_marks / (total_subjects * 100)) * 100
+    return percentage
+
+def result():
+    subject_names = ["math", "science", "english", "History", "art"]
+    subject_marks = []
+
+    for i, subject in enumerate(subject_names):
+        mark = float(input(f"what did you get on  {subject}? "))
+        subject_marks.append(mark)
+
+    percentage = calculate_percentage(subject_marks)
+
+    print(f"\nPercentage: {percentage:.2f}%")
+
+result()
